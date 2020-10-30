@@ -77,7 +77,6 @@ function turn(){
         card.addEventListener('click', ()=>{
             if (flipped.length<2){
                 flipped.push(card.getAttribute('id'))
-                console.log(flipped)
                 showCard(card);
                 if (flipped.length===2){
                     checkMatch()
