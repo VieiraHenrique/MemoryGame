@@ -63,7 +63,7 @@ function startGame(){
     cards.sort( () => .5 - Math.random() );
     cards.forEach((c)=>{
         let card = document.createElement('img');
-        card.setAttribute('src', 'img/verso.png');
+        card.setAttribute('src', 'img/back.png');
         card.setAttribute('id', c.path);
         card.classList.add('hidden');
         grid.appendChild(card);
@@ -105,7 +105,7 @@ function checkMatch(){
             shownedCards.forEach((card)=>{
             card.classList.remove('showned');
             card.classList.add('hidden');
-            card.setAttribute('src', 'img/verso.png')
+            card.setAttribute('src', 'img/back.png')
         })
         }, 1000)
     }
