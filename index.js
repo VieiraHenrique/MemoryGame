@@ -75,6 +75,7 @@ function turn(){
     let cards = document.querySelectorAll('.hidden');
     cards.forEach((card)=>{
         card.addEventListener('click', ()=>{
+            clearInterval();
             if (flipped.length<2){
                 flipped.push(card.getAttribute('id'))
                 showCard(card);
@@ -100,6 +101,8 @@ function checkMatch(){
             good.classList.remove('showned')
         })
     } else {
+
+
         setTimeout(()=>{
             let shownedCards = document.querySelectorAll('.showned');
             shownedCards.forEach((card)=>{
@@ -107,7 +110,9 @@ function checkMatch(){
             card.classList.add('hidden');
             card.setAttribute('src', 'img/back.png')
         })
-        }, 1000)
+        }, 400)
+
+        
     }
     let test = document.querySelectorAll('.hidden');
     if (test.length === 0){
