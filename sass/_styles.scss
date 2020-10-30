@@ -1,6 +1,7 @@
 body {
     background: #232323;
     color: #fff;
+    overflow: hidden;
 }
 
 .container {
@@ -24,6 +25,10 @@ body {
 
     img {
         cursor: pointer;
+
+        &:hover {
+            border: 1px solid #eaeaea;
+        }
     }
 }
 

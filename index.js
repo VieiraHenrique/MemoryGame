@@ -75,13 +75,11 @@ function turn(){
     let cards = document.querySelectorAll('.hidden');
     cards.forEach((card)=>{
         card.addEventListener('click', ()=>{
-            clearInterval();
             if (flipped.length<2){
                 flipped.push(card.getAttribute('id'))
                 showCard(card);
                 if (flipped.length===2){
-                    checkMatch()
-                    flipped = []
+                    setTimeout(checkMatch,400)
                 }
             }
         })
@@ -98,26 +96,21 @@ function checkMatch(){
     if (flipped[0]===flipped[1]){
         let goods = document.querySelectorAll(`img[id="${flipped[0]}"]`);
         goods.forEach((good)=>{
-            good.classList.remove('showned')
+            good.classList.remove('showned');
         })
     } else {
-
-
-        setTimeout(()=>{
-            let shownedCards = document.querySelectorAll('.showned');
-            shownedCards.forEach((card)=>{
-            card.classList.remove('showned');
-            card.classList.add('hidden');
-            card.setAttribute('src', 'img/back.png')
-        })
-        }, 400)
-
-        
+        let shownedCards = document.querySelectorAll('.showned');
+        shownedCards.forEach((card)=>{
+        card.classList.remove('showned');
+        card.classList.add('hidden');
+        card.setAttribute('src', 'img/back.png')
+        })  
     }
     let test = document.querySelectorAll('.hidden');
     if (test.length === 0){
         gameOver();
     }
+    flipped = []
 }
 
 function gameOver(){
