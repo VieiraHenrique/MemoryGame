@@ -5,53 +5,53 @@ const restart = document.getElementById('restart')
 const cards = [
     {
         name: 01,
-        path: 'img/01.png',
+        path: 'img/01.jpg',
         
     },
     {
         name: 01,
-        path: 'img/01.png',
+        path: 'img/01.jpg',
         
     },
     {
         name: 02,
-        path: 'img/02.png'
+        path: 'img/02.jpg'
     },
     {
         name: 02,
-        path: 'img/02.png'
+        path: 'img/02.jpg'
     },
     {
         name: 03,
-        path: 'img/03.png'
+        path: 'img/03.jpg'
     },
     {
         name: 03,
-        path: 'img/03.png'
+        path: 'img/03.jpg'
     },
     {
         name: 04,
-        path: 'img/04.png'
+        path: 'img/04.jpg'
     },
     {
         name: 04,
-        path: 'img/04.png'
+        path: 'img/04.jpg'
     },
     {
         name: 05,
-        path: 'img/05.png'
+        path: 'img/05.jpg'
     },
     {
         name: 05,
-        path: 'img/05.png'
+        path: 'img/05.jpg'
     },
     {
         name: 06,
-        path: 'img/06.png'
+        path: 'img/06.jpg'
     },
     {
         name: 06,
-        path: 'img/06.png'
+        path: 'img/06.jpg'
     },
 ];
 
