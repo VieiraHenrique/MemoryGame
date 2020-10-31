@@ -17,7 +17,7 @@ body {
 }
 
 .grid {
-    margin-top: 3rem;
+    margin-top: 1rem;
     max-width: 50%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -60,5 +60,18 @@ body {
             cursor: pointer;
             border-radius: 1rem;
         }
+    }
+}
+
+.score {
+    display: flex;
+    gap: 7rem;
+
+    h2 {
+        color: #eaeaea;
+    }
+
+    span {
+        color: rgb(194, 15, 15);
     }
 }

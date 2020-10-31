@@ -1,6 +1,8 @@
 const grid = document.getElementById('grid');
 const popup = document.getElementById('popup');
-const restart = document.getElementById('restart')
+const restart = document.getElementById('restart');
+const tries = document.getElementById('tries');
+const score = document.getElementById('score')
 
 const cards = [
     {
@@ -56,6 +58,7 @@ const cards = [
 ];
 
 let flipped = [];
+let track = 0;
 
 
 function startGame(){
@@ -79,6 +82,8 @@ function turn(){
                 flipped.push(card.getAttribute('id'))
                 showCard(card);
                 if (flipped.length===2){
+                    track++;
+                    tries.innerHTML = track
                     setTimeout(checkMatch,400)
                 }
             }
@@ -114,9 +119,12 @@ function checkMatch(){
 }
 
 function gameOver(){
+    score.innerHTML = track
     popup.style.display = 'flex';
     restart.addEventListener('click', ()=>{
         popup.style.display = 'none'
+        track = 0
+        tries.innerHTML = track
         startGame()
     })
 }
